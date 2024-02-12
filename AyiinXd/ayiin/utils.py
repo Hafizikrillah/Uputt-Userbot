@@ -58,8 +58,8 @@ async def autopilot():
     try:
         r = await bot(
             CreateChannelRequest(
-                title="Uᴘᴜᴛᴛ-Usᴇʀʙᴏᴛ Lᴏɢs",
-                about="» Group log Created by: Uputt-Userbot\n\n» Own🐣 : @Uputraa - @Iamuput\n» Support: @amneseey0u",
+                title="Kᴀɴᴇ-Usᴇʀʙᴏᴛ Lᴏɢs",
+                about="» Group log Created by: Kane-Userbot\n\n» Own : @abangE\n» Support: @ucelbotk",
                 megagroup=True,
             ),
         )
@@ -106,7 +106,7 @@ async def autobot():
     if who.username:
         username = f"{who.username}_bot"
     else:
-        username = f"Uputt{(str(who.id))[5:]}bot"
+        username = f"Kane{(str(who.id))[5:]}bot"
     bf = "@BotFather"
     await bot(UnblockRequest(bf))
     await bot.send_message(bf, "/cancel")
@@ -167,14 +167,14 @@ async def autobot():
             await asyncio.sleep(1)
             await bot.send_message(bf, f"@{username}")
             await asyncio.sleep(1)
-            await bot.send_message(bf, f"Managed With ✨ By {who.first_name}")
+            await bot.send_message(bf, f"Managed By ✨ {who.first_name}")
             await asyncio.sleep(3)
             await bot.send_message(bf, "/setdescription")
             await asyncio.sleep(1)
             await bot.send_message(bf, f"@{username}")
             await asyncio.sleep(1)
             await bot.send_message(
-                bf, f"✨ Owner ~ {who.first_name} ✨\n\n✨ Powered By ~ @amneseey0u ✨"
+                bf, f"✨ Owner ~ {who.first_name} ✨\n\n✨ Powered By ~ @ucelbotk ✨"
             )
             await bot.send_message(
                 BOTLOG_CHATID,
@@ -211,14 +211,14 @@ async def autobot():
         await asyncio.sleep(1)
         await bot.send_message(bf, f"@{username}")
         await asyncio.sleep(1)
-        await bot.send_message(bf, f"Managed With ✨ By {who.first_name}")
+        await bot.send_message(bf, f"Managed By ✨ {who.first_name}")
         await asyncio.sleep(3)
         await bot.send_message(bf, "/setdescription")
         await asyncio.sleep(1)
         await bot.send_message(bf, f"@{username}")
         await asyncio.sleep(1)
         await bot.send_message(
-            bf, f"✨ Owner ~ {who.first_name} ✨\n\n✨ Powered By ~ @amneseey0u @Uputraa @Iamuput ✨"
+            bf, f"✨ Owner ~ {who.first_name} ✨\n\n✨ Powered By ~ @ucelbotk ✨"
         )
         await bot.send_message(
             BOTLOG_CHATID,
