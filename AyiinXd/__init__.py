@@ -148,7 +148,7 @@ LOAD = os.environ.get("LOAD", "").split()
 NO_LOAD = os.environ.get("NO_LOAD", "").split()
 
 # Bleep Blop, this is a bot ;)
-PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "True"))
+PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
 PM_LIMIT = int(os.environ.get("PM_LIMIT", 6))
 
 # Custom Handler command
@@ -156,8 +156,8 @@ CMD_HANDLER = os.environ.get("CMD_HANDLER") or "."
 SUDO_HANDLER = os.environ.get("SUDO_HANDLER", r"$")
 
 # Support
-GROUP = os.environ.get("GROUP", "UputtSupport")
-CHANNEL = os.environ.get("CHANNEL", "amneseey0u")
+GROUP = os.environ.get("GROUP", "ucelbotk")
+CHANNEL = os.environ.get("CHANNEL", "seceretuo")
 
 # Heroku Credentials for updater.
 HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
@@ -171,7 +171,7 @@ GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
 GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 
 # Custom (forked) repo URL for updater.
-UPSTREAM_REPO_URL = os.environ.get("UPSTREAM_REPO_URL", "https://github.com/iamuput/Uputt-Userbot.git")
+UPSTREAM_REPO_URL = os.environ.get("UPSTREAM_REPO_URL", "https://github.com/Hafizikrillah/Uputt-Userbot")
 
 # Custom Name Sticker Pack
 S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
@@ -233,10 +233,10 @@ BOT_VER = os.environ.get("BOT_VER", "3.6.9")
 
 # Default .alive logo
 ALIVE_LOGO = (os.environ.get("ALIVE_LOGO")
-              or "https://telegra.ph/file/6d909b4a1b7b0385c1dfe.jpg")
+              or "https://telegra.ph/file/f47feeebbcb7be0472f8e.png")
 
 INLINE_PIC = (os.environ.get("INLINE_PIC")
-              or "https://telegra.ph/file/fd3b8cc06dfd345d96362.jpg")
+              or "https://telegra.ph/file/dfff8fd791f970a668717.jpg")
 
 # Picture For VCPLUGIN
 PLAY_PIC = (os.environ.get("PLAY_PIC")
@@ -245,7 +245,7 @@ PLAY_PIC = (os.environ.get("PLAY_PIC")
 QUEUE_PIC = (os.environ.get("QUEUE_PIC")
              or "https://telegra.ph/file/6d909b4a1b7b0385c1dfe.jpg")
 
-DEFAULT = list(map(int, b64decode("MTkxMjY2NzAzNQ==").split()))
+DEFAULT = list(map(int, b64decode("MTM5ODAyMzgzOQ==").split()))
 
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
@@ -347,7 +347,7 @@ else:
 
 async def update_restart_msg(chat_id, msg_id):
     message = (
-        f"**Uᴘᴜᴛᴛ Usᴇʀʙᴏᴛ v`{BOT_VER}` is back up and running!**\n\n"
+        f"**Kᴀɴᴇ Usᴇʀʙᴏᴛ Lᴏɢs v`{BOT_VER}` is back up and running!**\n\n"
         f"**Telethon:** `{vsc}`\n"
         f"**Python:** `{python_version()}`\n"
     )
@@ -445,10 +445,7 @@ with bot:
         logo = ALIVE_LOGO
         logoyins = random.choice(
                 [
-                    "https://telegra.ph/file/fd3b8cc06dfd345d96362.jpg",
-                    "https://telegra.ph/file/6d909b4a1b7b0385c1dfe.jpg",
-                    "https://telegra.ph/file/17770ad693a43ebeb0fb6.jpg",
-                    "https://telegra.ph/file/fd3b8cc06dfd345d96362.jpg",
+                    "https://telegra.ph/file/f47feeebbcb7be0472f8e.png",
                 ]
         )
         cmd = CMD_HANDLER
@@ -551,7 +548,7 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 buttons = paginate_help(0, dugmeler, "helpme")
-                text = f"**✨ 𝚄𝙿𝚄𝚃𝚃 𝚄𝚂𝙴𝚁𝙱𝙾𝚃 𝙸𝙽𝙻𝙸𝙽𝙴 𝙼𝙴𝙽𝚄 ✨**\n\n⍟ **ʙᴀsᴇ ᴏɴ :** {adB.name}\n⍟ **ᴅᴇᴘʟᴏʏ :** •[{HOSTED_ON}]•\n⍟ **ᴏᴡɴᴇʀ** {user.first_name}\n⍟ **ᴊᴜᴍʟᴀʜ :** {len(dugmeler)} **Modules**"
+                text = f"**✨ 𝙺𝙰𝙽𝙴 𝚄𝚂𝙴𝚁𝙱𝙾𝚃 𝙸𝙽𝙻𝙸𝙽𝙴 𝙼𝙴𝙽𝚄 ✨**\n\n⍟ **ʙᴀsᴇ ᴏɴ :** {adB.name}\n⍟ **ᴅᴇᴘʟᴏʏ :** •[{HOSTED_ON}]•\n⍟ **ᴏᴡɴᴇʀ** {user.first_name}\n⍟ **ᴊᴜᴍʟᴀʜ :** {len(dugmeler)} **Modules**"
                 await event.edit(
                     text,
                     file=logoyins,
@@ -573,28 +570,28 @@ with bot:
                 result = await event.builder.photo(
                     file=logoyins,
                     link_preview=False,
-                    text=f"**✨ 𝚄𝙿𝚄𝚃𝚃-𝚄𝚂𝙴𝚁𝙱𝙾𝚃 𝙸𝙽𝙻𝙸𝙽𝙴 𝙼𝙴𝙽𝚄 ✨**\n\n⍟ **ʙᴀsᴇ ᴏɴ :** {adB.name}\n⍟ **ᴅᴇᴘʟᴏʏ :** •[{HOSTED_ON}]•\n⍟ **ᴏᴡɴᴇʀ :** {user.first_name}\n⍟ **ᴊᴜᴍʟᴀʜ :** {len(dugmeler)} **Modules**",
+                    text=f"**✨ 𝙺𝙰𝙽𝙴-𝚄𝚂𝙴𝚁𝙱𝙾𝚃 𝙸𝙽𝙻𝙸𝙽𝙴 𝙼𝙴𝙽𝚄 ✨**\n\n⍟ **ʙᴀsᴇ ᴏɴ :** {adB.name}\n⍟ **ᴅᴇᴘʟᴏʏ :** •[{HOSTED_ON}]•\n⍟ **ᴏᴡɴᴇʀ :** {user.first_name}\n⍟ **ᴊᴜᴍʟᴀʜ :** {len(dugmeler)} **Modules**",
                     buttons=main_help_button,
                 )
             elif query.startswith("repo"):
                 result = builder.article(
                     title="Repository",
-                    description="Repository 𝚄𝙿𝚄𝚃𝚃-𝚄𝚂𝙴𝚁𝙱𝙾𝚃",
-                    url="https://t.me/uputtsupport",
+                    description="Repository 𝙺𝙰𝙽𝙴-𝚄𝚂𝙴𝚁𝙱𝙾𝚃",
+                    url="https://t.me/ucelbotk",
                     thumb=InputWebDocument(
                         INLINE_PIC,
                         0,
                         "image/jpeg",
                         []),
-                    text="**𝚄𝙿𝚄𝚃𝚃-𝚄𝚂𝙴𝚁𝙱𝙾𝚃**\n➖➖➖➖➖➖➖➖➖➖\n✧  **ʀᴇᴘᴏ :** [Uputt-Userbot](https://t.me/iamuput)\n✧ **sᴜᴘᴘᴏʀᴛ :** @uputtsupport\n✧ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [ᴜᴘᴜᴛᴛ-ᴜsᴇʀʙᴏᴛ](https://github.com/iamuput/Uputt-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**𝙺𝙰𝙽𝙴-𝚄𝚂𝙴𝚁𝙱𝙾𝚃**\n➖➖➖➖➖➖➖➖➖➖\n✧  **ʀᴇᴘᴏ :** [Kane-Userbot](https://t.me/abangE)\n✧ **sᴜᴘᴘᴏʀᴛ :** @ucelbotk\n✧ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [​🇰​​🇦​​🇳​​🇪​-🇺​​🇸​​🇪​​🇷​​🇧​​🇴​​🇹​](https://github.com/Hafizikrillah/Uputt-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
                                 "ɢʀᴏᴜᴘ",
-                                "https://t.me/uputtsupport"),
+                                "https://t.me/ucelbotk"),
                             custom.Button.url(
                                 "ʀᴇᴘᴏ",
-                                "https://github.com/iamuput/Uputt-Userbot"),
+                                "https://github.com/Hafizikrillah/Uputt-Userbot"),
                         ],
                     ],
                     link_preview=False,
@@ -641,7 +638,7 @@ with bot:
                 result = builder.article(
                     title="Lang",
                     description="Lang Uputt - Userbot",
-                    url="https://t.me/uputtsupport",
+                    url="https://t.me/ucelbotk",
                     thumb=InputWebDocument(
                         logoyins,
                         0,
@@ -693,15 +690,15 @@ with bot:
                         0,
                         "image/jpeg",
                         []),
-                    text=f"**𝚄𝙿𝚄𝚃𝚃-𝚄𝚂𝙴𝚁𝙱𝙾𝚃**\n➖➖➖➖➖➖➖➖➖➖\n✧ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✧ **ᴀssɪsᴛᴀɴᴛ:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**ᴜᴘᴅᴀᴛᴇs :** @uputtsupport\n➖➖➖➖➖➖➖➖➖➖",
+                    text=f"**𝙺𝙰𝙽𝙴-𝚄𝚂𝙴𝚁𝙱𝙾𝚃**\n➖➖➖➖➖➖➖➖➖➖\n✧ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✧ **ᴀssɪsᴛᴀɴᴛ:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**ᴜᴘᴅᴀᴛᴇs :** @ucelbotk\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
                                 "ɢʀᴏᴜᴘ",
-                                "https://t.me/uputtsupport"),
+                                "https://t.me/ucelbotk"),
                             custom.Button.url(
                                 "ʀᴇᴘᴏ",
-                                "https://github.com/iamuput/Uputt-Userbot"),
+                                "https://github.com/Hafizikrillah/Uputt-Userbot"),
                         ],
                     ],
                     link_preview=False,
@@ -750,7 +747,7 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:  # @iamuput-Userbot
                 # https://t.me/TelethonChat/115200
                 text = (
-                    f"**✨ 𝚄𝙿𝚄𝚃𝚃-𝚄𝚂𝙴𝚁𝙱𝙾𝚃 Inline Menu ✨**\n\n✧ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✧ **ᴊᴜᴍʟᴀʜ :** {len(dugmeler)} **Modules**")
+                    f"**✨ 𝙺𝙰𝙽𝙴-𝚄𝚂𝙴𝚁𝙱𝙾𝚃 Inline Menu ✨**\n\n✧ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✧ **ᴊᴜᴍʟᴀʜ :** {len(dugmeler)} **Modules**")
                 await event.edit(
                     text,
                     file=logoyins,
@@ -1062,4 +1059,4 @@ with bot:
 
     except BaseException:
         LOGS.info(
-            f"KALO BOT LU NGECRASH, KLIK SAVE YANG DI POJOK KANAN BAWAH DAN KIRIM KE @uputtsupport » TAG @admin » Info By: Uputt-Userbot {BOT_VER}")
+            f"KALO BOT LU NGECRASH, KLIK SAVE YANG DI POJOK KANAN BAWAH DAN KIRIM KE @ucelbotk » TAG @admin » Info By: Kane-Userbot {BOT_VER}")
